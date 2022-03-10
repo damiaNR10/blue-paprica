@@ -1,0 +1,103 @@
+.calculator {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+
+    &__buy {
+        display: block;
+        margin: 60px auto 80px auto;
+        background: $colorMainOrange;
+        width: 386px;
+        text-align: center;
+        line-height: 95px;
+        border-radius: 47.5px;
+        @include bigButtonShadow;
+        @include fontSize24px;
+        font-weight: 400;
+        transition: 0.2s ease all;
+
+        &:hover {
+            background-color: $colorMainBlack;
+            color: $colorMainOrange;
+            cursor: pointer;
+        }
+
+        span {
+            text-transform: uppercase;
+            font-weight: 900;
+            @include fontSize28pxLineHeight34px;
+        }
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 30px;
+        margin: 83px 104px 30px 104px;
+    }
+
+    &__h2 {
+        text-align: center;
+        padding-bottom: 39px;
+    }
+
+    &__h3 {
+        max-width: 446px;
+        text-align: center;
+        margin: 0 auto 155px auto;
+    }
+
+    &__h4 {
+        text-align: center;
+        max-width: 359px;
+        margin: 0 auto;
+
+        &--white {
+            color: $colorWhite;
+            max-width: 100%;
+
+            span {
+                opacity: 0.5;
+                display: inline-block;
+                margin: 0 17px 0 24px;
+            }
+        }
+    }
+
+    &__input {
+        width: 225px;
+        background: $colorWhite;
+        border: 1px solid $colorMainBlack;
+        text-align: center;
+        border-radius: 15px;
+        @include fontSize20pxLineHeight32px;
+        height: 70px;
+        margin: 0 auto;
+        color: $colorMainBlack;
+
+        &::placeholder {
+            color: $colorGrayForm;
+        }
+    }
+
+    &__p {
+        text-align: center;
+    }
+
+    &__result {
+        padding: 52px 217px;
+        background-color: $colorMainBlack;
+        border-radius: 15px;
+        // max-width: calc(1012px - 2*217px);
+        margin: 0 104px 81px 104px;
+    }
+
+    &__row {
+        background: $colorGrayBackground;
+        border-radius: 15px;
+        padding: 40px 66px 50px 66px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 40px;
+    }
+}

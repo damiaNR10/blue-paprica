@@ -1,0 +1,101 @@
+a {
+    text-decoration: none;
+    color: $colorMainBlack;
+    display: inline-block;
+}
+
+body {
+    font-family: $fontMontserrat;
+    color: $colorMainBlack;
+    margin: 0;
+    font-weight: 400;
+    @include fontSize16pxLineHeight20px;
+}
+
+button {
+    border: none;
+    outline: none;
+    font-family: $fontMontserrat;
+    background: none;
+    padding: 0;
+    color: $colorMainBlack;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1220px;
+    // width: calc(100% - 40px);
+    // padding: 0 20px;
+}
+
+fieldset {
+    margin: 0;
+    padding: 0;
+    display: block;
+    border: none;
+}
+
+form {
+    p {
+        font-weight: 400;
+
+        @media screen and (min-width: $mobile) {
+            font-weight: 500;
+        }
+    }
+}
+
+h1, h2, h3, h4 {
+    margin: 0;
+    font-weight: 900;
+}
+
+h1 {
+    @include fontSize55pxLineHeight67px;
+}
+
+h2 {
+    @include fontSize40pxLineHeight49px;
+}
+
+h3 {
+    @include fontSize28pxLineHeight34px;
+}
+
+h4 {
+    @include fontSize20pxLineHeight30px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+input {
+    border: none;
+    font-family: $fontMontserrat;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+p {
+    margin: 0;
+    @include fontSize20pxLineHeight32px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}

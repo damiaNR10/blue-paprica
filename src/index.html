@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Mass Loop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/main.scss">
+  </head>
+  <body>
+      <header class="header">
+          <div class="container header__container">
+              <h1 class="header__heading"><a class="header__a" href="#"></a><img src="img/svg/main-logo120x51.svg" alt="" /></h1>
+              <nav class="nav">
+                  <ul class="nav__ul">
+                      <li class="nav__li"><a href="#" class="nav__a">Policz zyski</a></li>
+                      <li class="nav__li"><a href="#" class="nav__a">O produkcie</a></li>
+                      <li class="nav__li"><a href="#" class="nav__a">Kontakt</a></li>
+                      <li class="nav__li"><a href="#" class="nav__a">FAQ</a></li>
+                  </ul>
+              </nav>
+              <div class="header__menu">
+                  <div class="header__language">
+                      <!-- <button class="header__button header__button--active" type="button">PL</button> -->
+                        <div class="header__language-box language-box--js">
+                            <button type="button" class="language-button--js language-button--active header__button header__button--visible header__button--active">PL</button>
+                            <button type="button" class="language-button--js header__button">EN</button>
+                            <button type="button" class="language-button--js header__button">DE</button>
+                            <button type="button" class="language-button--js header__button">GB</button>
+                        </div>
+                  </div>
+                  <!-- <select class="header__language">
+                      <option class="header__option header__button header__button--active">PL</option>
+                      <option class="header__option header__button">EN</option>
+                      <option class="header__option header__button">DE</option>
+                      <option class="header__option header__button">GB</option>
+                  </select> -->
+                  <a href="#" class="header__buy">Kup</a>
+              </div>
+          </div>
+      </header>
+      <section class="hero">
+          <div class="container">
+              <h1 class="hero__heading">Inteligentna kruszarka, która zamienia szkło w piasek.</h1>
+              <picture class="hero__picture"><img src="img/maasloop_orange_open_white_s 1.png" alt="Massloop" /></picture>
+          </div>
+          <div class="hero__content">
+              <div class="container">
+                  <h2 class="hero__h2">Płać 5 razy mniej za wywóz odpadów szklanych.</h2>
+                  <p class="hero__p">Kruszarka zmniejsza gabaryty szklanych śmieci, a Ty płacisz PIĘ-CIO-KROT-NIE niższe rachunki za ich wywóz.</p>
+              </div>
+          </div>
+      </section>
+      <section class="calculator">
+          <div class="container">
+              <h2 class="calculator__h2">Ile zaoszczędzisz?</h2>
+              <p class="calculator__p">Rachunek jest prosty.</p>
+              <div class="calculator__grid">
+                <div class="calculator__row">
+                    <h4 class="calculator__h4">Ile pojemników na szkło zapełniasz miesięcznie?</h4>
+                    <input type="number" min="1" placeholder="20" class="calculator__input input-quantity--js" />
+                </div>
+                <div class="calculator__row">
+                    <h4 class="calculator__h4">Ile płacisz za wywóz jednego pojemnika na szkło?</h4>
+                    <input type="number" min="1" placeholder="20 zł" class="calculator__input input-quantity--js" />
+                </div>
+              </div>
+              <div class="calculator__result">
+                  <h4 class="calculator__h4 calculator__h4--white">Dzięki kruszarce zaoszczędzisz<span class="result--js">900 zł</span>rocznie. </h4>
+              </div>
+              <p class="calculator__p">To na co wydasz zaoszczędzoną gotówkę?</p>
+              <a class="calculator__buy"><span>Kup</span> 8499 zł</a>
+              <h3 class="calculator__h3">Brzmi dobrze? Uważaj. Dopiero się rozkręcamy!</h3>
+          </div>
+      </section>
+  </body>
+  <script src="/src/js/language.js"></script>
+</html>

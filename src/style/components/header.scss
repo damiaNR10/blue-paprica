@@ -1,0 +1,121 @@
+.header {
+    @include animateShadow;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 90px;
+    z-index: 9;
+    background: $colorWhite;
+
+    &__a {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+
+    &__button {
+        display: none;
+        width: 39px;
+        @include fontSize16pxLineHeight20px;
+        width: 47px;
+        // height: 20px;
+        text-align: left;
+        padding: 10px 0 10px 6px;
+        position: relative;
+
+        &:last-of-type {
+            padding-bottom: 5px;
+        }
+
+        &--active {
+            display: inline-block;
+            background-image: url(../img/svg/arrow-bottom.svg);
+            background-size: 9px auto;
+            background-position: calc(100% - 2px) center;
+            background-repeat: no-repeat;
+        }
+
+        &--visible {
+            display: inline-block;
+            border-top: 0.5px solid $colorGrayForm;
+            // padding: 10px 0;
+
+            &:first-of-type {
+                border: none;
+            }
+        }
+    }
+
+    &__buy {
+        text-transform: uppercase;
+        background-color: $colorMainOrange;
+        font-weight: 900;
+        @include fontSize16pxLineHeight20px;
+        width: 152px;
+        line-height: 55px;
+        display: inline-block;
+        border-radius: 28.5px;
+        border: 2px solid $colorMainOrange;
+        @include smallButtonShadow;
+        text-align: center;
+        transition: 0.2s ease all;
+
+        &:hover {
+            background-color: $colorMainBlack;
+            color: $colorMainOrange;
+            border-color: $colorMainBlack;
+        }
+    }
+
+    &__container {
+        // display: flex;
+        // justify-content: space-between;
+        // flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        align-items: center;
+        height: 90px;
+    }
+
+    &__heading {
+        position: relative;
+        line-height: 0;
+        width: fit-content;
+    }
+
+    &__language {
+        display: flex;
+        align-items: center;
+        width: 47px;
+        padding: 10px;
+        // width: 39px;
+        // height: 100%;
+        position: relative;
+    }
+
+    &__language-box {
+        position: absolute;
+        left: calc(50% - 23px);
+        top: calc(50% - 30px);
+        display: grid;
+        grid-template-columns: 1fr;
+        background-color: $colorWhite;
+        padding: 10px;
+
+        &--active {
+            @include inputKalkulatorShadow;
+        }
+    }
+
+    &__menu {
+        width: fit-content;
+        margin-left: auto;
+        display: flex;
+        flex-wrap: wrap;
+        grid-gap: 27px;
+    }
+}
