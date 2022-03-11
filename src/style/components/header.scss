@@ -22,7 +22,6 @@
         width: 39px;
         @include fontSize16pxLineHeight20px;
         width: 47px;
-        // height: 20px;
         text-align: left;
         padding: 10px 0 10px 6px;
         position: relative;
@@ -42,7 +41,6 @@
         &--visible {
             display: inline-block;
             border-top: 0.5px solid $colorGrayForm;
-            // padding: 10px 0;
 
             &:first-of-type {
                 border: none;
@@ -51,18 +49,22 @@
     }
 
     &__buy {
-        text-transform: uppercase;
-        background-color: $colorMainOrange;
-        font-weight: 900;
-        @include fontSize16pxLineHeight20px;
-        width: 152px;
-        line-height: 55px;
-        display: inline-block;
-        border-radius: 28.5px;
-        border: 2px solid $colorMainOrange;
-        @include smallButtonShadow;
-        text-align: center;
-        transition: 0.2s ease all;
+        display: none;
+
+        @media screen and (min-width: $laptop) {
+            text-transform: uppercase;
+            background-color: $colorMainOrange;
+            font-weight: 900;
+            @include fontSize16pxLineHeight20px;
+            width: 148px;
+            line-height: 53px;
+            display: inline-block;
+            border-radius: 28.5px;
+            border: 2px solid $colorMainOrange;
+            @include smallButtonShadow;
+            text-align: center;
+            transition: 0.2s ease all;
+        }
 
         &:hover {
             background-color: $colorMainBlack;
@@ -73,18 +75,36 @@
 
     &__container {
         // display: flex;
-        // justify-content: space-between;
+        // // justify-content: space-between;
         // flex-wrap: wrap;
-        display: grid;
-        grid-template-columns: 1fr 2fr 1fr;
-        align-items: center;
+        // display: grid;
+        // grid-template-columns: 1fr 2fr 1fr;
         height: 90px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+
+        @media screen and (min-width: $laptop) {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            justify-content: space-between;
+        }
     }
 
     &__heading {
         position: relative;
         line-height: 0;
         width: fit-content;
+    }
+
+    &__img {
+        width: 97px;
+        height: auto;
+
+        @media screen and (min-width: $tablet) {
+            width: 120px;
+        }
     }
 
     &__language {
@@ -113,9 +133,14 @@
 
     &__menu {
         width: fit-content;
-        margin-left: auto;
+        // margin-left: auto;
         display: flex;
         flex-wrap: wrap;
-        grid-gap: 27px;
+        align-items: center;
+        grid-gap: 29px;
+
+        @media screen and (min-width: $mobile) {
+            grid-gap: 27px;
+        }
     }
 }

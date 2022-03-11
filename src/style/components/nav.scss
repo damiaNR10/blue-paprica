@@ -1,27 +1,24 @@
 .nav {
-    width: fit-content;
-    margin: 0 auto;
+    display: none;
+
+    @media screen and (min-width: $laptop) {
+        display: block;
+        width: fit-content;
+        margin-left: 105px;
+    }
 
     &__a {
+        transition: 0.2s ease color;
 
-    // animation-timing-function: ease-out;
-    // animation-duration: 300ms;
-    // &:hover {
-    //     color: $colorMainOrange;
-    // }
+        &:hover {
+            color: $colorMainOrange;
+        }
     }
 
     &__ul {
         display: flex;
         align-items: center;
         justify-content: center;
-    }
-
-    &__li {
-        // margin: 0 24px;
-        // margin: 0 39px 0 24px;
-        // margin: 0 35px;
-        // margin: 0 35px 0 32px;
-        margin: 0 38px 0 29px;
+        grid-gap: 65px;
     }
 }

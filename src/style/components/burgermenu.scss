@@ -1,0 +1,19 @@
+.burgermenu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 36px;
+    height: 26px;
+
+    span {
+        display: inline-block;
+        width: 100%;
+        height: 2px;
+        background-color: $colorMainBlack;
+    }
+
+    @media screen and (min-width: $laptop) {
+        display: none;
+    }
+}
