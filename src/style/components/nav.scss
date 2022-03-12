@@ -1,24 +1,88 @@
 .nav {
-    display: none;
+    // display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 90px;
+    width: 100%;
+    height: fit-content;
+    background-color: $colorWhite;
+    // padding: 70px 20px;
+    box-sizing: border-box;
+    display: grid;
+    grid-gap: 72px;
+    min-height: calc(100vh - 90px);
+    align-content: baseline;
+    // order: 99;
+    overflow-y: scroll;
+    transform: translateX(150%);
+    transition: transform 0.3s;
 
     @media screen and (min-width: $laptop) {
-        display: block;
+        // display: block;
         width: fit-content;
         margin-left: 105px;
+        position: relative;
+        left: initial;
+        top: initial;
+        padding: 0;
+        min-height: fit-content;
+        transform: translateX(0);
+        order: initial;
+        overflow: hidden;
+    }
+
+    &--active {
+        transform: translateY(0);
     }
 
     &__a {
         transition: 0.2s ease color;
+        text-align: center;
+        display: block;
+        @include fontSize15pxLineHeight19px;
+
+        @media screen and (min-width: $laptop) {
+            @include fontSize16pxLineHeight20px;
+        }
 
         &:hover {
             color: $colorMainOrange;
         }
     }
 
+    &__li {
+        height: fit-content;
+
+        &--mobile {
+
+            @media screen and (min-width: $laptop) {
+                display: none;
+            }
+        }
+    }
+
     &__ul {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        grid-gap: 65px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 72px;
+        position: absolute;
+        width: calc(100% - 40px);
+        height: fit-content;
+        min-height: calc(100vh - 230px);
+        align-content: baseline;
+        padding: 70px 20px;
+
+        @media screen and (min-width: $laptop) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            grid-gap: 65px;
+            min-height: fit-content;
+            width: fit-content;
+            position: relative;
+            left: initial;
+            padding: 0;
+        }
     }
 }

@@ -12,13 +12,15 @@
       <header class="header">
           <div class="container header__container">
               <h1 class="header__heading"><a class="header__a" href="#"></a><img class="header__img" src="img/svg/main-logo120x51.svg" alt="" /></h1>
-              <nav class="nav">
+              <nav class="nav nav--js">
                   <ul class="nav__ul">
-                      <li class="nav__li"><a href="#" class="nav__a">Policz&nbsp;zyski</a></li>
-                      <li class="nav__li"><a href="#" class="nav__a">O&nbsp;produkcie</a></li>
+                      <li class="nav__li"><a href="#calculator" class="nav__a">Policz&nbsp;zyski</a></li>
+                      <li class="nav__li"><a href="#hero" class="nav__a">O&nbsp;produkcie</a></li>
                       <li class="nav__li"><a href="#" class="nav__a">Kontakt</a></li>
                       <li class="nav__li"><a href="#" class="nav__a">FAQ</a></li>
+                      <li class="nav__li nav__li--mobile"><a href="#" class="header__buy header__buy--mobile">Kup</a></li>
                   </ul>
+                  <!-- <a href="#" class="header__buy header__buy--mobile">Kup</a> -->
               </nav>
               <div class="header__menu">
                   <div class="header__language">
@@ -37,7 +39,7 @@
                       <option class="header__option header__button">GB</option>
                   </select> -->
                   <a href="#" class="header__buy">Kup</a>
-                  <button class="burgermenu">
+                  <button class="burgermenu burgermenu--js">
                       <span></span>
                       <span></span>
                       <span></span>
@@ -45,10 +47,10 @@
               </div>
           </div>
       </header>
-      <section class="hero">
+      <section id="hero" class="hero">
           <div class="container hero__container">
               <h1 class="hero__heading">Inteligentna kruszarka, która zamienia szkło w piasek.</h1>
-              <picture class="hero__picture"><img src="img/maasloop_orange_open_white_s 1.png" alt="Massloop" /></picture>
+              <picture class="hero__picture"><img src="img/maasloop_orange_open_white_s 1.png" alt="Massloop" loading="lazy" /></picture>
           </div>
           <div class="hero__content">
               <div class="container">
@@ -57,7 +59,7 @@
               </div>
           </div>
       </section>
-      <section class="calculator">
+      <section id="calculator" class="calculator">
           <div class="container calculator__container">
               <h2 class="calculator__h2">Ile zaoszczędzisz?</h2>
               <p class="calculator__p">Rachunek jest prosty.</p>
@@ -72,14 +74,15 @@
                 </div>
               </div>
               <div class="calculator__result">
-                  <h4 class="calculator__h4 calculator__h4--white">Dzięki kruszarce zaoszczędzisz<span class="calculator__result-box result--js">900 zł</span>rocznie. </h4>
+                  <h4 class="calculator__h4 calculator__h4--white"><span>Dzięki kruszarce zaoszczędzisz</span><span class="calculator__result-box result--js">900 zł</span><span>rocznie.</span> </h4>
               </div>
               <p class="calculator__p">To na co wydasz zaoszczędzoną gotówkę?</p>
               <a class="calculator__buy"><span>Kup</span> 8499 zł</a>
               <h3 class="calculator__h3">Brzmi dobrze? Uważaj. Dopiero się rozkręcamy!</h3>
           </div>
       </section>
+      <script src="/src/js/burgermenu.js"></script>
+      <script src="/src/js/calculator.js"></script>
+      <script src="/src/js/language.js"></script>
   </body>
-  <script src="/src/js/calculator.js"></script>
-  <script src="/src/js/language.js"></script>
 </html>

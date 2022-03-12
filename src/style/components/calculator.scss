@@ -1,17 +1,26 @@
 .calculator {
+    scroll-margin-top: 90px;
 
     &__buy {
         display: block;
-        margin: 60px auto 80px auto;
+        margin: 60px auto;
         background: $colorMainOrange;
-        width: 386px;
+        width: 100%;
         text-align: center;
-        line-height: 95px;
         border-radius: 47.5px;
         @include bigButtonShadow;
-        @include fontSize24px;
+        // font-size: 20px;
         font-weight: 400;
         transition: 0.2s ease all;
+        @include fontSize24pxLineHeight29px;
+        line-height: 80px;
+
+        @media screen and (min-width: $tablet) {
+            width: 386px;
+            line-height: 95px;
+            // @include fontSize24px;
+            margin: 60px auto 80px auto;
+        }
 
         &:hover {
             background-color: $colorMainBlack;
@@ -66,7 +75,12 @@
     &__h3 {
         max-width: 446px;
         text-align: center;
-        margin: 0 auto 155px auto;
+        margin: 0 auto 103px auto;
+
+        @media screen and (min-width: $mobile) {
+            margin: 0 auto 155px auto;
+
+        }
     }
 
     &__h4 {
@@ -80,8 +94,26 @@
             display: flex;
             flex-direction: column;
 
-            @media screen and (min-width: $mobile) {
-                display: inline-block;
+            @media screen and (min-width: $tablet) {
+                display: block;
+            }
+
+            span {
+                &:first-of-type {
+                    line-height: 52px;
+
+                    @media screen and (min-width: $tablet) {
+                        line-height: initial;
+                    }  
+                } 
+
+                &:last-of-type {
+                    line-height: 23px;
+
+                    @media screen and (min-width: $tablet) {
+                        line-height: initial;
+                    }  
+                }
             }
         }
     }
@@ -122,9 +154,9 @@
         // max-width: calc(1012px - 2*217px);
         margin: 0 0 60px 0;
 
-        @media screen and (min-width: $mobile) {
-            padding: 40px;
-        }
+        // @media screen and (min-width: $mobile) {
+        //     padding: 40px;
+        // }
 
         @media screen and (min-width: $laptop) {
             padding: 52px 217px;
@@ -135,7 +167,13 @@
     &__result-box {
         opacity: 0.5;
         display: inline-block;
-        margin: 0 17px 0 24px;
+        @include fontSize28pxLineHeight28px;
+        margin: 15px 0;
+
+        @media screen and (min-width: $mobile) {
+            @include fontSize24pxLineHeight32px;
+            margin: 0 17px 0 24px;
+        }
 
         &--active {
             color: $colorMainOrange;
