@@ -11,8 +11,8 @@ const openMenu = () => {
 }
 
 const closeMenu = () => {
-    body.classList.remove('no-scroll');
-    navigation.classList.remove('nav--active');
+    if(body.classList.contains('no-scroll')) body.classList.remove('no-scroll');
+    if(navigation.classList.contains('nav--active')) navigation.classList.remove('nav--active');
     isMenuVisible = false;
 }
 
