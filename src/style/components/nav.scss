@@ -1,5 +1,4 @@
 .nav {
-    // display: none;
     position: absolute;
     left: 0;
     right: 0;
@@ -7,19 +6,16 @@
     width: 100%;
     height: fit-content;
     background-color: $colorWhite;
-    // padding: 70px 20px;
     box-sizing: border-box;
     display: grid;
     grid-gap: 72px;
     min-height: calc(100vh - 90px);
     align-content: baseline;
-    // order: 99;
     overflow-y: scroll;
     transform: translateX(150%);
     transition: transform 0.3s;
 
     @media screen and (min-width: $laptop) {
-        // display: block;
         width: fit-content;
         margin-left: 105px;
         position: relative;

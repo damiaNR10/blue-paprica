@@ -4,7 +4,6 @@
     left: 0;
     top: 0;
     width: 100vw;
-    // height: 90px;
     z-index: 9;
     background: $colorWhite;
 
@@ -84,7 +83,6 @@
     }
 
     &__container {
-        // height: 90px;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -127,8 +125,6 @@
         align-items: center;
         width: 47px;
         padding: 10px;
-        // width: 39px;
-        // height: 100%;
         position: relative;
     }
 
@@ -148,7 +144,6 @@
 
     &__menu {
         width: fit-content;
-        // margin-left: auto;
         display: flex;
         flex-wrap: wrap;
         align-items: center;

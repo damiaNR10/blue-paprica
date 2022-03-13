@@ -1,6 +1,6 @@
 const burgerButton = document.querySelector('.burgermenu--js');
 const navigation = document.querySelector('.nav--js');
-const body = document.querySelector('body');
+const body = document.querySelector('html');
 const navigationLinks = document.querySelectorAll('.nav__a');
 let isMenuVisible = false;
 
@@ -17,7 +17,6 @@ const closeMenu = () => {
 }
 
 if(burgerButton) burgerButton.addEventListener('click', () => {
-    console.log('click');
     !isMenuVisible ? openMenu() : closeMenu();
 });
 
@@ -31,3 +30,5 @@ if(navigationLinks) navigationLinks.forEach(navigationLink => {
             isMenuVisible = false;
     });
 });
+
+window.addEventListener('resize', closeMenu);

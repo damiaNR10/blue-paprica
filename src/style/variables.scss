@@ -112,3 +112,13 @@ $desktop: 1440px;
 $laptop: 1024px;
 $tablet: 768px;
 $mobile: 361px;
+
+// //Animation
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.75;
+    }
+  }
